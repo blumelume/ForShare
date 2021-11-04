@@ -1,0 +1,206 @@
+
+// Colors
+$copy: #292929;
+$grey-dark: #A9909F;
+$grey-light: #E7E7E7;
+$light: #fff;
+$primary: #d5e8c9;
+$primary-dark: #a3d683;
+
+// Containers / Widths
+$hero: 1400px;
+$w1: 1100px;
+$w2: 940px;
+$w3: 650px;
+$w4: 450px;
+
+
+// Spacing
+$m-lg: 6.25rem;
+$m-md: 3.2rem;
+$m-sm: 1.6rem;
+$m-xs: 0.8rem;
+
+// Typography
+@font-face {
+    font-family: 'Roboto', sans-serif;
+    src: url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,500;0,700;1,400&display=swap');
+}
+@font-face {
+    font-family: 'Source Serif Pro', serif;
+    src: url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,700;1,400&family=Source+Serif+Pro:wght@300;400&display=swap');
+}
+
+$font-size: 17pt;
+$font-copy: "Roboto", sans-serif;
+$font-heading: 'Source Serif Pro', serif;
+
+$f-h1: 2.25rem;
+$f-h2: 1.7rem;
+$f-h3: 1.4rem;
+$f-h4: 1.2rem;
+$f-h5: 1rem;
+$f-h6: 1rem;
+
+
+// Generalities
+* {
+  margin: 0;
+  padding: 0;
+}
+
+hr {
+  border: none;
+  border: 2px solid $grey-light;
+  margin-top: $m-sm; margin-bottom: $m-sm;
+}
+
+// Colors
+.bg-copy { background-color: $copy; }
+.bg-grey-dark { background-color: $grey-dark; }
+.bg-grey-light { background-color: $grey-light; }
+.bg-light { background-color: $light; }
+.bg-primary { background-color: $primary; }
+.bg-primary-dark { background-color: $primary-dark; }
+
+.light { color: $grey-light; }
+
+// Widths & Containers
+.w1 {
+    max-width: $w1;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: $m-xs/2; padding-right: $m-xs/2;
+}
+.hero { @extend .w1; max-width: $hero; }
+.w2 { @extend .w1; max-width: $w2; }
+.w3 { @extend .w1; max-width: $w3; }
+.w4 { @extend .w1; max-width: $w4; }
+
+// Spacing
+.m-lg-t { padding-top: $m-lg; }
+.m-lg-b { padding-bottom: $m-lg; }
+.m-md-t { padding-top: $m-md; }
+.m-md-b { padding-bottom: $m-md; }
+.m-sm-t { padding-top: $m-sm; }
+.m-sm-b { padding-bottom: $m-sm; }
+.m-xs-t { padding-top: $m-xs; }
+.m-xs-b { padding-bottom: $m-xs; }
+
+// Typography
+body { font-size: $font-size; }
+p {
+    font-size: 1rem;
+    color: $copy;
+    font-family: $font-copy;
+    font-weight: 400;
+    text-decoration: none;
+    line-height: 1.5em;
+}
+* { @extend p; }
+
+a {
+  font-weight: 500;
+  border-bottom: 2px solid $copy;
+}
+
+h1, .h1 {
+  font-size: $f-h1;
+  font-weight: 500;
+}
+h2, .h2 {
+  font-size: $f-h2;
+  font-weight: 300;
+}
+h3, .h3 {
+  font-size: $f-h3;
+  font-weight: 500;
+}
+h4, .h4 {
+  font-size: $f-h4;
+  font-weight: 200;
+}
+h5, .h5 {
+  font-size: $f-h5;
+  font-weight: 600;
+}
+h6, .h6 {
+  font-size: $f-h6;
+  font-weight: 600;
+}
+
+.big { font-weight: 500; }
+.bold { font-weight: bold; }
+
+em, i {
+  font-weight: 300;
+  font-style: italic;
+}
+
+// Lists
+ul, ol {
+  list-style-position: inside;
+  li {
+    ul, ol {
+      margin-left: 1.5em;
+    }
+  }
+}
+ul {
+  list-style-type: disc;
+  ul {
+    list-style-type: circle;
+    ul { list-style-type: revert; }
+  }
+}
+ol {
+  list-style-type: decimal;
+  ol {
+    list-style-type: lower-alpha;
+    ol { list-style-type: upper-roman; }
+  }
+}
+
+// Buttons / Forms
+button:hover, .button:hover, .btn:hover {
+  border-color: $primary;
+  //color: $grey-dark;
+  background-color: $primary;
+}
+button, .button, .btn {
+  width: max-content;
+
+  padding: $m-xs/2 $m-xs;
+  margin-left: $m-xs/2; margin-right: $m-xs/2;
+
+  background-color: $light;
+  border: 3px solid $primary-dark;
+  color: $copy;
+
+  transition: 0.4s ease-in-out;
+}
+
+// Tables
+table {
+  margin-top: $m-sm;
+  margin-bottom: $m-sm;
+
+  background-color: $grey-light;
+  border-collapse: collapse;
+
+  tbody {
+    padding: $m-xs;
+
+    tr {
+      td {
+        padding: $m-xs / 2;
+        border: 2px solid #fff;
+      }
+      th {
+        padding: $m-xs $m-xs / 2;
+        @extend .h3;
+        line-height: 1em;
+      }
+    }
+  }
+}
