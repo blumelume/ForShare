@@ -1,0 +1,15 @@
+.sharebuttons {
+  display: flex;
+  flex-direction: row;
+
+  margin-left: calc(0.8rem / -2); /* xs/2 */
+  margin-right: calc(0.8rem / -2); /* xs/2 */
+}
+
+.sharebuttons .sharebutton {
+  height: 40px; width: 40px;
+  margin: 0 calc(0.8rem / 2);  /* xs/2 */
+
+  background-color: #DCEDFF; /* main-light */
+  border-radius: 40px;
+}
