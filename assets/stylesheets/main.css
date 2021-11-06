@@ -1,3 +1,6 @@
+body {
+  overflow: hidden;
+}
 * {
   font-size: 12pt;
 }
@@ -66,6 +69,9 @@ h5, .h5 {
   transform: translate(75%, 65%);
 }
 
+.sharebuttons.example {
+  height: 40px;
+}
 #create-button {
   position: relative;
   display: flex;
@@ -76,23 +82,24 @@ h5, .h5 {
   margin-left: 3.2rem; /* md */
   background-color: transparent;
 }
-.sliding-arrow.right {
+
+.btn-goto-right.btn-goto-md {
+  position: relative;
+  width: 40px; height: 40px;
+  margin-left: 0.4rem; /* xs/2 */
+}
+.btn-goto-right.btn-goto-md .btn-goto-arm {
+  display: inline-block;
   position: absolute;
-  top: 0; right: 0px;
-  z-index: -1;
+  top: 50%; right: 0;
+  width: 100%; height: 1px;
+  background-color: #292929; /* copy */
+	transform-origin: right;
+	background-color: #292929; /* main */
 
-  width: 0; height: 0;
-
-  border-top: 20px solid transparent;
-  border-bottom: 20px solid transparent;
-  border-left: 30px solid #94B0DA;
-
-  transition: 0.25s ease-in-out;
+  transition: transform 0.2s ease-in-out;
 }
-#create-button:hover {
-  /* background-color: #94B0DA; /* main */ */
-}
-#create-button:hover .sliding-arrow.right {
-  right: -30px;
-  transition: 0.25s ease-in-out;
-}
+.btn-goto-right.btn-goto-md .btn-goto-arm:first-child { transform: rotate(30deg); }
+.btn-goto-right.btn-goto-md .btn-goto-arm:last-child { transform: rotate(-30deg); }
+#create-button.btn-goto-trigger:hover .btn-goto-right .btn-goto-arm:first-child  { transform: rotate(20deg); }
+#create-button.btn-goto-trigger:hover .btn-goto-right .btn-goto-arm:last-child  { transform: rotate(-20deg); }
