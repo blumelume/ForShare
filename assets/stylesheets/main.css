@@ -1,5 +1,5 @@
 * {
-  font-size: 14pt;
+  font-size: 12pt;
 }
 
 h1, .h1, h2, .h2, h3, .h3 {
@@ -40,4 +40,35 @@ h5, .h5 {
   justify-content: center;
 
   height: 100vh;
+}
+
+#create-button {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+
+  height: 100%;
+  margin-left: 3.2rem; /* md */
+  background-color: transparent;
+}
+.sliding-arrow.right {
+  position: absolute;
+  top: 0; right: 0px;
+  z-index: -1;
+
+  width: 0; height: 0;
+
+  border-top: 20px solid transparent;
+  border-bottom: 20px solid transparent;
+  border-left: 30px solid #94B0DA;
+
+  transition: 0.25s ease-in-out;
+}
+#create-button:hover {
+  /* background-color: #94B0DA; /* main */ */
+}
+#create-button:hover .sliding-arrow.right {
+  right: -30px;
+  transition: 0.25s ease-in-out;
 }

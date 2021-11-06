@@ -83,13 +83,16 @@ hr {
 body {
   font-size: 17pt;
 }
-p, *, .copy {
+p, *, .copy, .copy-big {
   font-size: 1rem;
   color: #292929;
   font-family: "Roboto", sans-serif;
   font-weight: 400;
   text-decoration: none;
   line-height: 1.5em;
+}
+.copy-big {
+  font-size: 1.1rem;
 }
 a {
   font-weight: 500;
@@ -154,18 +157,24 @@ ol ol ol {
   list-style-type: upper-roman;
 }
 button:hover, .button:hover, .btn:hover {
-  border-color: #d5e8c9;
-  background-color: #d5e8c9;
+  /* border-color: #d5e8c9; */
+  background-color: #292929; /* copy */
+  transition: 0.4s ease-out;
 }
 button, .button, .btn {
   width: max-content;
-  padding: 0.4rem 0.8rem;
-  margin-left: 0.4rem;
-  margin-right: 0.4rem;
+  padding: 0.4rem 0.8rem; /* xs/2 xs */
+  margin-left: 0.4rem; /* xs/2 */
+  margin-right: 0.4rem; /* xs/2 */
+
+  line-height: 1em;
+
   background-color: #fff;
-  border: 3px solid #a3d683;
-  color: #292929;
-  transition: 0.4s ease-in-out;
+  /* border: 3px solid #a3d683; */
+  border: none;
+  background-color: #94B0DA; /* main */
+  color: #fff; /* light */
+  transition: 0.3s ease-out;
 }
 table {
   margin-top: 1.6rem;
