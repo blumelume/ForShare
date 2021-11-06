@@ -39,10 +39,35 @@ h5, .h5 {
 
 #main {
   display: flex;
+  flex-direction: row;
+  overflow-x: scroll;
+
+  height: 100vh;
+  width: 100vw;
+}
+#main > div {
+  display: flex;
   flex-flow: column;
   justify-content: center;
 
-  height: 100vh;
+  min-width: 100vw;
+}
+#main > div .content {
+  margin-top: 6.25rem; /* md */
+  margin-bottom: 6.25rem; /* md */
+}
+
+#main #select .selected-services {
+  padding: 0.8rem; /* xs */
+  background-color: #292929; /* copy */
+}
+#main #select .selected-services .sharebutton { background-color: #94B0DA; /* main */ }
+#main #select .available-services {
+  flex-wrap: wrap;
+
+}
+#main #select .available-services .sharebutton {
+  margin-top: 0.8rem; /* xs */
 }
 
 #background-circles {
@@ -95,11 +120,16 @@ h5, .h5 {
   width: 100%; height: 1px;
   background-color: #292929; /* copy */
 	transform-origin: right;
-	background-color: #292929; /* main */
 
   transition: transform 0.2s ease-in-out;
 }
 .btn-goto-right.btn-goto-md .btn-goto-arm:first-child { transform: rotate(30deg); }
 .btn-goto-right.btn-goto-md .btn-goto-arm:last-child { transform: rotate(-30deg); }
-#create-button.btn-goto-trigger:hover .btn-goto-right .btn-goto-arm:first-child  { transform: rotate(20deg); }
-#create-button.btn-goto-trigger:hover .btn-goto-right .btn-goto-arm:last-child  { transform: rotate(-20deg); }
+.btn-goto-trigger:hover .btn-goto-right .btn-goto-arm:first-child  { transform: rotate(20deg); }
+.btn-goto-trigger:hover .btn-goto-right .btn-goto-arm:last-child  { transform: rotate(-20deg); }
+
+.back-next-buttons {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
