@@ -42,6 +42,30 @@ h5, .h5 {
   height: 100vh;
 }
 
+#background-circles {
+  position: absolute;
+  bottom: 0; left: 0;
+  z-index: -100;
+}
+#background-circles .background-circle {
+  position: absolute;
+  bottom: 0; left: 0;
+  border-radius: 100%;
+  transition: 0.3s ease-in-out;
+}
+#background-circles .background-circle#big {
+  width: 1023px; height: 1023px;
+  background-color: #DCEDFF; /* main-light */
+  opacity: 0.25;
+  transform: translate(-35%, 50%);
+}
+#background-circles .background-circle#small {
+  width: 515px; height: 515px;
+  background-color: #94B0DA; /* main */
+  opacity: 0.25;
+  transform: translate(75%, 65%);
+}
+
 #create-button {
   position: relative;
   display: flex;
