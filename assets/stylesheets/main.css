@@ -39,7 +39,9 @@ h5, .h5 {
 
 #main {
   display: flex;
+  align-items: center;
   flex-direction: row;
+
   overflow-x: scroll;
   scroll-snap-type: x mandatory;
 
@@ -51,7 +53,6 @@ h5, .h5 {
   scrollbar-width: none;  /* Firefox */
 }
 #main::-webkit-scrollbar { display: none; }
-
 
 #main > div {
   display: flex;
