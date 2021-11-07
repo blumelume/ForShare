@@ -90,7 +90,7 @@ h5, .h5 {
   position: absolute;
   bottom: 0; left: 0;
   border-radius: 100%;
-  transition: 1s ease-in-out;
+  transition: 1s ease-out;
 }
 #background-circles .background-circle#big {
   width: 1023px; height: 1023px;
@@ -107,9 +107,21 @@ h5, .h5 {
 #background-circles .background-circle#big.p2 { transform: translate(-28%, 58%); }
 #background-circles .background-circle#small.p2 { transform: translate(90%, 60%); }
 
+#background-circles .background-circle.pre-load {
+  opacity: 0 !important;
+  transform: translate(-30%, 10%) scale(0.1, 0.1) !important;
+}
+
 .sharebuttons.example {
   height: 40px;
 }
+.sharebuttons.example .sharebutton { opacity: 1; }
+.sharebuttons.example .sharebutton.pre-load {
+  opacity: 0 !important;
+}
+
+
+
 #create-button {
   position: relative;
   display: flex;

@@ -1,6 +1,16 @@
 let vw = window.innerWidth;
 //let main = document.getElementById('main');
 
+function onPageLoad() {
+  $( '#background-circles .background-circle' ).toggleClass("pre-load");
+
+  // Animating example-sharebuttons
+  $(".sharebuttons.example").children().each(function(index) {
+    console.log(this, index);
+    $( this ).delay(400*index).removeClass("pre-load");
+  });
+}
+
 let currentPage = 0;
 let maxPages = 2;
 
