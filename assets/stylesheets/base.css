@@ -16,6 +16,9 @@ hr {
   margin-top: 1.6rem;
   margin-bottom: 1.6rem;
 }
+.hide {
+  display: none;
+}
 .bg-copy {
   background-color: #292929;
 }
