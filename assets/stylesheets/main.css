@@ -41,16 +41,26 @@ h5, .h5 {
   display: flex;
   flex-direction: row;
   overflow-x: scroll;
+  scroll-snap-type: x mandatory;
 
   height: 100vh;
   width: 100vw;
+
+  /* Hiding scrollbar - keeping scroll */
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
 }
+#main::-webkit-scrollbar { display: none; }
+
+
 #main > div {
   display: flex;
   flex-flow: column;
   justify-content: center;
 
   min-width: 100vw;
+
+  scroll-snap-align: center;
 }
 #main > div .content {
   margin-top: 6.25rem; /* md */
