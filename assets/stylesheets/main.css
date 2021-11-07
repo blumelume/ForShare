@@ -90,7 +90,7 @@ h5, .h5 {
   position: absolute;
   bottom: 0; left: 0;
   border-radius: 100%;
-  transition: 0.3s ease-in-out;
+  transition: 1s ease-in-out;
 }
 #background-circles .background-circle#big {
   width: 1023px; height: 1023px;
@@ -104,6 +104,8 @@ h5, .h5 {
   opacity: 0.25;
   transform: translate(75%, 65%);
 }
+#background-circles .background-circle#big.p2 { transform: translate(-28%, 58%); }
+#background-circles .background-circle#small.p2 { transform: translate(90%, 60%); }
 
 .sharebuttons.example {
   height: 40px;
