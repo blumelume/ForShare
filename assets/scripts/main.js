@@ -7,7 +7,7 @@ function nextPage() {
   $( '#main' ).css("scroll-snap-type", "none");
   $( '#main' ).animate({
     'scrollLeft': currentPage * vw
-  }, 700, "easeInOutCubic", function () {
+  }, 1000, "easeInOutQuart", function () {
     $( '#main' ).css("scroll-snap-type", "x mandatory");
   });
 }
@@ -16,7 +16,7 @@ function prevPage() {
   $( '#main' ).css("scroll-snap-type", "none");
   $( '#main' ).animate({
     'scrollLeft': currentPage * vw
-  }, 700, "easeInOutCubic", function () {
+  }, 1000, "easeInOutQuart", function () {
     $( '#main' ).css("scroll-snap-type", "x mandatory");
   });
 }
