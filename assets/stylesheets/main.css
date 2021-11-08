@@ -73,7 +73,7 @@ h5, .h5 {
   background-color: #292929; /* copy */
 }
 #main #select .selected-services .sharebutton { background-color: #94B0DA; /* main */ }
-#main #select .available-services {
+#main #select .available-services, #main #select .selected-services {
   flex-wrap: wrap;
 
 }
@@ -120,6 +120,18 @@ h5, .h5 {
   opacity: 0 !important;
 }
 
+.sharebutton .remove-button {
+  position: absolute;
+  top: 0; right: 0;
+  width: 15px;
+
+  opacity: 0;
+  transition: 0.2s ease-in-out;
+}
+.sharebutton.selected:hover { position: relative; }
+.sharebutton.selected:hover .remove-button {
+  opacity: 1;
+}
 
 
 #create-button {
