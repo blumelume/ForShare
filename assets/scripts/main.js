@@ -64,72 +64,32 @@ let removeButtonHTML = '<img src="assets/media/button-x.svg" class="remove-butto
 
 $( document ).ready( function() {
   $( '.available-services .sharebutton, .selected-services .sharebutton', '#select .content' ).each( function() {
-    $this = $(this);
-    console.log($this);
+    let $this = $(this);
 
-    $this.append( $(removeButtonHTML).on('click', deselectService) ); // Adding remove-button
-    $this.on('click', selectService); // Adding click-listener for selection
+    let $removeButton = $($.parseHTML(removeButtonHTML));
+    $removeButton.click(deselectService);
+    $this.append( $removeButton ); // Adding remove-button
+    $this.click(selectService); // Adding click-listener for selection
+    // console.log($this, jQuery._data( $this.get(0), "events" ));
   });
 });
 
 function selectService() {
-  $this = $(this);
+  let $this = $(this);
   if (!$this.hasClass('selected')) {
     $this.addClass('selected');
     $selectedServices.append( $this );
   }
 }
 function deselectService() {
-  $this = $(this).parent();
-  console.log($this);
-  if ($this.hasClass('selected')) {
-    $this.removeClass('selected');
-    console.log($availableServices);
-    $availableServices.add( $this );
-  }
-}
+  let $this = $(this).parent();
+  // cloning and removing the target-element
+  let $e = $this.clone();
+  $this.remove();
 
-// function addRemoveStickerToServices() {
-//   $( '.available-services .sharebutton, .selected-services .sharebutton', '#select .content' ).each( function(index) {
-//     var $this = $(this);
-//     if ($this.children().length == 0) {
-//       $this.append( removeButtonHTML );
-//
-//       $( '.remove-button', this ).on( 'click', removeSelectedService);
-//     }
-//   });
-// }
-// function addClickListenerToServices() {
-//   // Adding eventlisteners for 'click' to available
-//   $( '.available-services .sharebutton, .selected-services .sharebutton', '#select .content' ).each( function(index) {
-//     var $this = $(this);
-//     if ($this.is('div')) {
-//       $this.on( 'click', selectService);
-//     }
-//   });
-// }
-//
-// function removeSelectedService() {
-//   var $rb = $(this); // remove button
-//   var $sb = $rb.parent(); // sharebutton
-//
-//   // Removing 'Service' from list of selected
-//   if ($sb.hasClass('selected')) {
-//     console.log("yes, i am");
-//
-//     $sb.removeClass('selected');
-//     $sb.addClass('available');
-//     $( '#select .content .available-services' ).append( $sb );
-//   }
-//   console.log(this, $(this).parent(), $rb, $sb);
-// }
-//
-// function selectService() {
-//   // Appending 'Service' to list of selected
-//   if ($(this).hasClass('available')) {
-//
-//     $(this).addClass('selected');
-//     $(this).removeClass('available');
-//     $( '#select .content .selected-services' ).append( $(this) );
-//   }
-// }
+  // resetting event-handlers and moving element
+  $e.click(selectService);
+  $('.remove-button', $e).click(deselectService);
+  $e.removeClass('selected');
+  $e.appendTo($availableServices);
+}
