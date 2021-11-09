@@ -63,7 +63,7 @@ let $availableServices = $( '.available-services', '#select .content' );
 let removeButtonHTML = '<img src="assets/media/button-x.svg" class="remove-button" role="presentation" alt="">';
 
 $( document ).ready( function() {
-  $( '.available-services .sharebutton, .selected-services .sharebutton', '#select .content' ).each( function() {
+  $( '.available-services .fs-sharebutton, .selected-services .fs-sharebutton', '#select .content' ).each( function() {
     let $this = $(this);
 
     let $removeButton = $($.parseHTML(removeButtonHTML));

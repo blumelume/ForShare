@@ -15,12 +15,13 @@
     <link rel="stylesheet" href="assets/stylesheets/base.css">
     <link rel="stylesheet" href="assets/stylesheets/main.css">
     <link rel="stylesheet" href="assets/stylesheets/sharebuttons.css">
-    <!-- <link rel="stylesheet" href="assets/stylesheets/goto.css"> -->
 
     <!-- scripts -->
     <script defer src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
     <script defer src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js" integrity="sha256-VazP97ZCwtekAsvgPBSUwPFKdrwD3unUfSGVYrahUqU=" crossorigin="anonymous"></script>
     <script defer src="assets/scripts/main.js" charset="utf-8"></script>
+    <script type="text/javascript"> let forShareData = '{ "selectedServices": [ "twitter", "linkedin" ] }'; </script>
+    <script defer src="assets/scripts/forshare.js" charset="utf-8"></script>
   </head>
   <body onload="onPageLoad()">
 
@@ -45,11 +46,11 @@
         </p>
 
         <div class="sharebuttons example m-xs-t">
-          <div class="sharebutton"></div>
-          <div class="sharebutton"></div>
-          <div class="sharebutton"></div>
-          <div class="sharebutton"></div>
-          <div class="sharebutton"></div>
+          <div class="fs-sharebutton"></div>
+          <div class="fs-sharebutton"></div>
+          <div class="fs-sharebutton"></div>
+          <div class="fs-sharebutton"></div>
+          <div class="fs-sharebutton"></div>
 
           <!-- <button class="button copy" id="create-button" type="button" name="Create Sharebuttons">
             CREATE SHAREBUTTONS
@@ -71,25 +72,25 @@
           <h2 class="h1 centered m-md-b">Select Services</h2>
 
           <div class="selected-services sharebuttons">
-            <div class="sharebutton selected"></div>
-            <div class="sharebutton selected"></div>
+            <div class="fs-sharebutton selected"></div>
+            <div class="fs-sharebutton selected"></div>
           </div>
           <div class="available-services sharebuttons m-sm-t">
-            <div class="sharebutton"></div>
-            <div class="sharebutton"></div>
-            <div class="sharebutton"></div>
-            <div class="sharebutton"></div>
-            <div class="sharebutton"></div>
-            <div class="sharebutton"></div>
-            <div class="sharebutton"></div>
-            <div class="sharebutton"></div>
-            <div class="sharebutton"></div>
-            <div class="sharebutton"></div>
-            <div class="sharebutton"></div>
-            <div class="sharebutton"></div>
-            <div class="sharebutton"></div>
-            <div class="sharebutton"></div>
-            <div class="sharebutton"></div>
+            <div class="fs-sharebutton"></div>
+            <div class="fs-sharebutton"></div>
+            <div class="fs-sharebutton"></div>
+            <div class="fs-sharebutton"></div>
+            <div class="fs-sharebutton"></div>
+            <div class="fs-sharebutton"></div>
+            <div class="fs-sharebutton"></div>
+            <div class="fs-sharebutton"></div>
+            <div class="fs-sharebutton"></div>
+            <div class="fs-sharebutton"></div>
+            <div class="fs-sharebutton"></div>
+            <div class="fs-sharebutton"></div>
+            <div class="fs-sharebutton"></div>
+            <div class="fs-sharebutton"></div>
+            <div class="fs-sharebutton"></div>
           </div>
 
         </div>
