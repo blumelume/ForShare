@@ -7,9 +7,17 @@
 }
 
 .sharebuttons .fs-sharebutton {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
   height: 40px; width: 40px;
   margin: 0 calc(0.8rem / 2);  /* xs/2 */
 
   background-color: #DCEDFF; /* main-light */
   border-radius: 40px;
+}
+
+.sharebuttons .fs-sharebutton .fs-sharebutton-logo {
+  width: 25px; height: 25px;
 }
