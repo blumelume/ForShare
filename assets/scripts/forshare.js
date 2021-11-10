@@ -5,7 +5,7 @@ let services = JSON.parse(
 let data = JSON.parse(forShareData);
 
 let i = 0;
-Array.from( document.getElementsByClassName('fs-sharebutton') ).forEach( (e) => {
+Array.from( document.getElementsByClassName('fs-sharebutton-wrapper') ).forEach( (e) => {
   if (!e.classList.contains('fs-exclude')) { // excluding developer-buttons
     if (e.tagName == "A" || e.tagName == 'DIV') {
       let fs_img = document.createElement('img');

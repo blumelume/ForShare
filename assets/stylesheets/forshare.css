@@ -1,4 +1,4 @@
-.sharebuttons {
+.fs-sharebutton-wrapper {
   display: flex;
   flex-direction: row;
 
@@ -6,7 +6,7 @@
   margin-right: calc(0.8rem / -2); /* xs/2 */
 }
 
-.sharebuttons .fs-sharebutton {
+.fs-sharebutton-wrapper .fs-sharebutton {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -15,9 +15,10 @@
   margin: 0 calc(0.8rem / 2);  /* xs/2 */
 
   background-color: #DCEDFF; /* main-light */
+  border: none;
   border-radius: 40px;
 }
 
-.sharebuttons .fs-sharebutton .fs-sharebutton-logo {
+.fs-sharebutton-wrapper .fs-sharebutton .fs-sharebutton-logo {
   width: 22px; height: 22px;
 }
