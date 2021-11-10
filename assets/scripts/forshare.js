@@ -4,22 +4,27 @@ let services = JSON.parse(
 
 let data = JSON.parse(forShareData);
 
-let i = 0;
 Array.from( document.getElementsByClassName('fs-sharebutton-wrapper') ).forEach( (e) => {
   if (!e.classList.contains('fs-exclude')) { // excluding developer-buttons
-    if (e.tagName == "A" || e.tagName == 'DIV') {
+
+    for (i = 0; i < data.selectedServices.length; i++) {
+      // Creating sharebutton
+      let sb = document.createElement('a');
+      sb.classList.add("fs-sharebutton");
+      sb.setAttribute('href', services['services'][i]['link']);
+      sb.setAttribute('target', '_blank');
+      sb.setAttribute('role', 'noreferrer');
+
+      // Creating logo-img
       let fs_img = document.createElement('img');
       fs_img.setAttribute('src', 'assets/media/logos/' + services['services'][i]['img-src']);
       fs_img.classList.add("fs-sharebutton-logo");
       fs_img.setAttribute('alt', '');
       fs_img.setAttribute('role', 'presentation');
 
-      e.setAttribute('href', services['services'][i]['link']);
-      e.setAttribute('target', '_blank');
-      e.setAttribute('role', 'noreferrer');
-
-      e.appendChild( fs_img );
-      i++;
+      sb.appendChild( fs_img );
+      e.appendChild( sb );
     }
+
   }
 });
