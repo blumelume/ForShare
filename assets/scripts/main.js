@@ -63,6 +63,23 @@ let $availableServices = $( '.available-services', '#select .content' );
 let removeButtonHTML = '<img src="assets/media/button-x.svg" class="remove-button" role="presentation" alt="">';
 
 $( document ).ready( function() {
+  // Populating available services div with data
+  services['services'].forEach( (service) => {
+    // Creating sharebutton
+    let sb = document.createElement('div');
+    sb.classList.add("fs-sharebutton");
+
+    // Creating logo-img
+    let fs_img = document.createElement('img');
+    fs_img.setAttribute('src', 'assets/media/logos/' + service['img-src']);
+    fs_img.classList.add("fs-sharebutton-logo");
+    fs_img.setAttribute('alt', '');
+    fs_img.setAttribute('role', 'presentation');
+
+    sb.appendChild( fs_img );
+    $availableServices.append( sb );
+  });
+
   $( '.available-services .fs-sharebutton, .selected-services .fs-sharebutton', '#select .content' ).each( function() {
     let $this = $(this);
 
