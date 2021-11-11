@@ -21,7 +21,7 @@ Array.from( document.getElementsByClassName('fs-sharebutton-wrapper') ).forEach(
 
         // Creating logo-img
         let fs_img = document.createElement('img');
-        fs_img.setAttribute('src', 'assets/media/logos/' + service['img-src']);
+        fs_img.setAttribute('src', 'https://forshare.site/files/ForShare/assets/media/logos/' + service['img-src']);
         fs_img.classList.add("fs-sharebutton-logo");
         fs_img.setAttribute('alt', '');
         fs_img.setAttribute('role', 'presentation');
